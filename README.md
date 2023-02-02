@@ -14,7 +14,7 @@ When upgrading from version 0.8.16 to 0.8.18, if both compiz-plugins-extra and c
 
 #### Adding using Layman
 
-To add this overlay to Portage using `layman`, run `layman -o https://github.com/CerisWhite/compiz-reloaded-overlay/raw/master/compiz-reloaded.xml -f -a compiz-reloaded`. To update the repository, run `layman -s compiz-reloaded` (or `layman -S` to update all the installed overlays managed by Layman).
+To add this overlay to Portage using `layman`, run `layman -o https://github.com/amper128/compiz-reloaded-overlay/raw/master/compiz-reloaded.xml -f -a compiz-reloaded`. To update the repository, run `layman -s compiz-reloaded` (or `layman -S` to update all the installed overlays managed by Layman).
 
 #### Adding using repos.conf
 
@@ -25,7 +25,7 @@ To add this overlay to Portage in `repos.conf`, here is example configuration fo
 priority = 50
 location = /var/lib/layman/compiz-reloaded
 sync-type = git
-sync-uri = https://github.com/CerisWhite/compiz-reloaded-overlay.git
+sync-uri = https://github.com/amper128/compiz-reloaded-overlay.git
 auto-sync = yes
 clone-depth = 0
 ```
@@ -34,7 +34,7 @@ See the Gentoo wiki page at https://wiki.gentoo.org/wiki//etc/portage/repos.conf
 
 #### Adding using eselect-repository (not tested)
 
-To add this overlay to Portage using `eselect-repository`, run `eselect repository add compiz-reloaded git https://github.com/CerisWhite/compiz-reloaded-overlay.git`. The repository should be automatically updated when you update your system.
+To add this overlay to Portage using `eselect-repository`, run `eselect repository add compiz-reloaded git https://github.com/amper128/compiz-reloaded-overlay.git`. The repository should be automatically updated when you update your system.
 
 ### Installation of packages
 
@@ -81,6 +81,6 @@ Live ebuilds will not be automatically updated when updating your installed pack
 ## Important Note
 
 `librsvg` does not ship the requested "librsvg-features.h" that `compiz-meta` relies on. It is now named "rsvg-features.h", omitting the "lib". To correct this, I have made a simple script to create the necessary symlinks. `emerge librsvg` before continuing!
-`curl https://raw.githubusercontent.com/CerisWhite/compiz-reloaded-overlay/master/fix-rsvg-includes.sh | sudo bash`
+`curl https://raw.githubusercontent.com/amper128/compiz-reloaded-overlay/master/fix-rsvg-includes.sh | sudo bash`
 or if you've installed through layman
 `sudo bash /var/lib/layman/compiz-reloaded/fix-rsvg-includes.sh`
