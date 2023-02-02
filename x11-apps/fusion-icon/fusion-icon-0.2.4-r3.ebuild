@@ -1,8 +1,8 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-PYTHON_COMPAT=( python3_{4,5,6,7,8} )
+EAPI=7
+PYTHON_COMPAT=( python3_{9,10,11} )
 
 DISTUTILS_SINGLE_IMPL=1
 inherit distutils-r1 eutils gnome2-utils
