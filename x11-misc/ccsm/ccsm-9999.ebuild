@@ -1,12 +1,12 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{9,10,11} )
+PYTHON_COMPAT=( python3_{10,11,12} )
 DISTUTILS_IN_SOURCE_BUILD=1
 DISTUTILS_SINGLE_IMPL=1
-inherit distutils-r1 git-r3 gnome2-utils
+inherit distutils-r1 git-r3 xdg-utils
 
 DESCRIPTION="A graphical manager for CompizConfig Plugin (libcompizconfig)"
 HOMEPAGE="https://gitlab.com/compiz"
@@ -41,8 +41,8 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-python_configure_all() {
-	mydistutilsargs=(
+src_configure() {
+	DISTUTILS_ARGS=(
 		build
 		"--prefix=/usr"
 		"--with-gtk=$(usex gtk3 3.0 2.0)"
@@ -50,9 +50,9 @@ python_configure_all() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 }

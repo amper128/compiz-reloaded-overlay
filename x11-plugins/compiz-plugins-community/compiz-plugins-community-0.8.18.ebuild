@@ -1,9 +1,9 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit autotools eutils gnome2-utils
+inherit autotools xdg-utils
 
 DESCRIPTION="Compiz Window Manager: Community Plugins"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
@@ -77,11 +77,11 @@ compiz_icon_cache_update() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 	compiz_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 	compiz_icon_cache_update
 }

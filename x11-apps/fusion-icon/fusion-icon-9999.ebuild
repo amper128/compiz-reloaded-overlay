@@ -1,11 +1,11 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-PYTHON_COMPAT=( python3_{9,10,11} )
+EAPI=8
+PYTHON_COMPAT=( python3_{10,11,12} )
 
 DISTUTILS_SINGLE_IMPL=1
-inherit distutils-r1 eutils git-r3 gnome2-utils
+inherit distutils-r1 git-r3 xdg-utils
 
 DESCRIPTION="Fusion Icon (Compiz tray icon) for Compiz 0.8.x series"
 HOMEPAGE="https://gitlab.com/compiz"
@@ -37,16 +37,16 @@ RDEPEND="${PYTHON_DEPS}
 
 DEPEND="${RDEPEND}"
 
-python_configure_all() {
-	mydistutilsargs=(
+src_configure() {
+	DISTUTILS_ARGS=(
 		build
 		"--with-qt=5.0"
 		"--with-gtk=3.0"
 	)
 }
 
-python_install_all() {
-	mydistutilsargs=(
+src_install() {
+	DISTUTILS_ARGS=(
 		install
 		--prefix=/usr
 	)
@@ -54,9 +54,9 @@ python_install_all() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 }

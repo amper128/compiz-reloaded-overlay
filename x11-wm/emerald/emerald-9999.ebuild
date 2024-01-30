@@ -1,9 +1,9 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit autotools gnome2-utils git-r3
+inherit autotools xdg-utils git-r3
 
 DESCRIPTION="Emerald Window Decorator"
 HOMEPAGE="https://gitlab.com/compiz"
@@ -56,13 +56,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	gtk-update-icon-cache
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 }

@@ -1,0 +1,192 @@
+diff --git a/src/addhelper/addhelper.c b/src/addhelper/addhelper.c
+index 3bc8a6b36250497e77c88e35af81762c2bb95bf7..29b0b6a583a8619ef3f147cf4060cf1c3b75d637 100644
+--- a/src/addhelper/addhelper.c
++++ b/src/addhelper/addhelper.c
+@@ -24,6 +24,7 @@
+  */
+ 
+ #include <compiz-core.h>
++#include <stdlib.h>
+ #include "addhelper_options.h"
+ 
+ #define GET_ADD_DISPLAY(d)                            \
+diff --git a/src/bench/bench.c b/src/bench/bench.c
+index 9cdef8cb1d789cfa0b1d87ddbcfd13ccfbc2d16d..ae64c58a8502302ef293e0db9adb0e382597d572 100644
+--- a/src/bench/bench.c
++++ b/src/bench/bench.c
+@@ -21,6 +21,7 @@
+  **/
+ 
+ #include <compiz-core.h>
++#include <stdlib.h>
+ 
+ #include "bench_tex.h"
+ #include "bench_options.h"
+diff --git a/src/firepaint/firepaint.c b/src/firepaint/firepaint.c
+index b147b035149bade7be885316657d222d75255d7d..69a477c9fadfebf0fd81eb250076d7805d376124 100644
+--- a/src/firepaint/firepaint.c
++++ b/src/firepaint/firepaint.c
+@@ -20,6 +20,7 @@
+  */
+ 
+ #include <compiz-core.h>
++#include <stdlib.h>
+ 
+ #include "firepaint_options.h"
+ #include "firepaint_tex.h"
+diff --git a/src/grid/grid.c b/src/grid/grid.c
+index a8d51520d0f48c0e197a8ee17d555feba88c5341..e4b5624073b55b11cc34e7aa3ecb2e851e9c875c 100644
+--- a/src/grid/grid.c
++++ b/src/grid/grid.c
+@@ -23,6 +23,7 @@
+  */
+ 
+ #include <compiz-core.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include "grid_options.h"
+ 
+diff --git a/src/highlightcontent/highlightcontent.c b/src/highlightcontent/highlightcontent.c
+index 33bf932080a4ba9262394e48331ac7721defeaf3..5d66978bfd57e747fb0db872dac1a896deb89a13 100644
+--- a/src/highlightcontent/highlightcontent.c
++++ b/src/highlightcontent/highlightcontent.c
+@@ -21,6 +21,7 @@
+  */
+ 
+ #include <math.h>
++#include <stdlib.h>
+ #include <string.h>
+ 
+ #include <compiz-core.h>
+diff --git a/src/loginout/loginout.c b/src/loginout/loginout.c
+index e2889d2a331285a1994535153d88664291457780..839f7b4a2fe1f4f39babac3a7602c0cbd621d303 100644
+--- a/src/loginout/loginout.c
++++ b/src/loginout/loginout.c
+@@ -20,6 +20,7 @@
+  */
+ 
+ #include <compiz-core.h>
++#include <stdlib.h>
+ 
+ #include "loginout_options.h"
+ 
+diff --git a/src/mblur/mblur.c b/src/mblur/mblur.c
+index 103cd32615deaedacd1f5a1ee6fbb5895c57185a..4e15c6d6cb0784d07a6dcf03812d8b6218500e88 100644
+--- a/src/mblur/mblur.c
++++ b/src/mblur/mblur.c
+@@ -20,6 +20,7 @@
+  */
+ 
+ #include <math.h>
++#include <stdlib.h>
+ 
+ #include <compiz-core.h>
+ 
+diff --git a/src/reflex/reflex.c b/src/reflex/reflex.c
+index 8c6ebc3fdda2476d5cd05661c5fb72a53d80a292..83a7d66f4e58fa7788ed7536fc62fba796fa285e 100644
+--- a/src/reflex/reflex.c
++++ b/src/reflex/reflex.c
+@@ -19,6 +19,7 @@
+  *
+  */
+ #include <compiz-core.h>
++#include <stdlib.h>
+ 
+ #include "reflex_options.h"
+ 
+diff --git a/src/scalefilter/scalefilter.c b/src/scalefilter/scalefilter.c
+index 55e2a9683e9d763acf6d635123722eaffaeb8df1..c10c5d1f6b7a38a489528ebc29f1183ec5a241da 100644
+--- a/src/scalefilter/scalefilter.c
++++ b/src/scalefilter/scalefilter.c
+@@ -25,6 +25,7 @@
+ 
+ #define _GNU_SOURCE
+ #include <math.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <wchar.h>
+ #include <locale.h>
+diff --git a/src/shelf/shelf.c b/src/shelf/shelf.c
+index cd17839543ec243f07622b64d74b7b8006efece5..e4fd09c5fafba00e0f0f5ecd0def4f7dca53559c 100644
+--- a/src/shelf/shelf.c
++++ b/src/shelf/shelf.c
+@@ -33,6 +33,7 @@
+ #include <X11/extensions/shape.h>
+ #include <X11/cursorfont.h>
+ #include <math.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include "shelf_options.h"
+ 
+diff --git a/src/showmouse/showmouse.c b/src/showmouse/showmouse.c
+index fe972a233f0a3f252e3d6da8b4143cac54c33002..32c3cb97a1d4c53586ab6761aa535dcf63efe0e1 100644
+--- a/src/showmouse/showmouse.c
++++ b/src/showmouse/showmouse.c
+@@ -25,6 +25,7 @@
+  */
+ 
+ #include <math.h>
++#include <stdlib.h>
+ #include <string.h>
+ 
+ #include <compiz-core.h>
+diff --git a/src/splash/splash.c b/src/splash/splash.c
+index c72b9b010ae405283c8d2a6b146a744e0b7d6272..986a3ec615ec614da742590a0763d870da425077 100644
+--- a/src/splash/splash.c
++++ b/src/splash/splash.c
+@@ -20,6 +20,7 @@
+  */
+ 
+ #include <math.h>
++#include <stdlib.h>
+ 
+ #include <compiz-core.h>
+ #include <X11/Xatom.h>
+diff --git a/src/trailfocus/trailfocus.c b/src/trailfocus/trailfocus.c
+index ecfa84d68b379d861e035509b0094fa34efe0400..05c50f4e25c02338315d6a92e0f054f3eadc92f6 100644
+--- a/src/trailfocus/trailfocus.c
++++ b/src/trailfocus/trailfocus.c
+@@ -25,6 +25,7 @@
+  *
+  */
+ 
++#include <stdlib.h>
+ #include <string.h>
+ #include <compiz-core.h>
+ #include "trailfocus_options.h"
+diff --git a/src/vidcap/vidcap.c b/src/vidcap/vidcap.c
+index 10157b2c63de6d1d70901345060c15cd7aa1ef7e..a08126db3b80b32d70d0ff676e7f6b1346a2a87d 100644
+--- a/src/vidcap/vidcap.c
++++ b/src/vidcap/vidcap.c
+@@ -27,6 +27,7 @@
+ 
+ #define _GNU_SOURCE /* For asprintf */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/src/wallpaper/wallpaper.c b/src/wallpaper/wallpaper.c
+index fd23b694b608626732d26f05a699ad5adba8eceb..2c47fa7b02b99351134baaea1c233eb4e85e5edd 100644
+--- a/src/wallpaper/wallpaper.c
++++ b/src/wallpaper/wallpaper.c
+@@ -23,6 +23,7 @@
+  */
+ 
+ #include <stdarg.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <math.h>
+ #include <dirent.h>
+diff --git a/src/widget/widget.c b/src/widget/widget.c
+index ce7d4f03164bb94ba6d1f8215ef93214bf5bd6de..6d146fa65a26185cc81be4f73eef956d32e00cef 100644
+--- a/src/widget/widget.c
++++ b/src/widget/widget.c
+@@ -26,6 +26,7 @@
+  *
+  */
+ 
++#include <stdlib.h>
+ #include <string.h>
+ #include <compiz-core.h>
+ #include <X11/Xatom.h>
